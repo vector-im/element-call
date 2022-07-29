@@ -74,6 +74,7 @@ interface Props {
   children: Element[];
   onPress: (e: PressEvent) => void;
   onPressStart: (e: PressEvent) => void;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }
 export const Button = forwardRef<HTMLButtonElement, Props>(
@@ -136,6 +137,7 @@ export function MicButton({
   ...rest
 }: {
   muted: boolean;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }) {
   return (
@@ -153,6 +155,7 @@ export function VideoButton({
   ...rest
 }: {
   muted: boolean;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }) {
   return (
@@ -172,6 +175,7 @@ export function ScreenshareButton({
 }: {
   enabled: boolean;
   className?: string;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }) {
   return (
@@ -189,6 +193,7 @@ export function HangupButton({
   ...rest
 }: {
   className?: string;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }) {
   return (
@@ -210,6 +215,7 @@ export function SettingsButton({
   ...rest
 }: {
   className?: string;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }) {
   return (
@@ -227,6 +233,7 @@ export function InviteButton({
   ...rest
 }: {
   className?: string;
+  // TODO: add all props for <Button>
   [index: string]: unknown;
 }) {
   return (

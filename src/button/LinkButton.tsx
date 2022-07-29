@@ -17,6 +17,7 @@ limitations under the License.
 import React from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import * as H from "history";
 
 import {
   variantToClassName,
@@ -28,7 +29,9 @@ interface Props {
   className: string;
   variant: ButtonVariant;
   size: ButtonSize;
-  children: JSX.Element;
+  children: JSX.Element | string;
+  to: H.LocationDescriptor | ((location: H.Location) => H.LocationDescriptor);
+  // TODO: add all props for <Link>
   [index: string]: unknown;
 }
 
@@ -37,6 +40,7 @@ export function LinkButton({
   variant,
   size,
   children,
+  to,
   ...rest
 }: Props) {
   return (
@@ -46,6 +50,7 @@ export function LinkButton({
         sizeToClassName[size],
         className
       )}
+      to={to}
       {...rest}
     >
       {children}
